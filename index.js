@@ -1,7 +1,19 @@
 const express=require('express')
 const app = express()
-const Driver=require("./Models/driver");
-const Rider=require("./Models/rider")
+const routes=require('./routes')
+const models=require("./database/models")
+const { sequelize,Rider,Driver,Trip } = models;
+const Promise=require('bluebird')
+const bodyparser=require('body-parser')
+const Riders=require("./seeders/rider.json")
+const Drivers=require("./seeders/driver.json")
+const Trips=require("./seeders/trip.json")
+const swaggerUi = require("swagger-ui-express")
+swaggerDocument = require("./swagger.json")
+app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({ extended: true }));
+
+
 
 const Port=process.env.Port||5000;
 
@@ -9,52 +21,22 @@ const Port=process.env.Port||5000;
 app.get('/', (req, res) => {
     res.send('Hello World!')
   })
-// all drivers
-app.get('/alldrivers',(req,res)=>{
-    var drivers = Driver.filter(elements=>elements)
-    if(drivers)
-    res.json(drivers)
-    else res.sendStatus(400)
 
-})
-//get driver by id
+app.use('/api',routes)
 
-
-app.get('/driver/:id',(req,res)=>{
-    var driver = Driver.filter(elements=>elements.id == req.params.id)
-    console.log(Driver)
-
-    if(driver)
-    res.json(driver)
-    else res.sendStatus(400)
-})
-// where  driver status available
-app.get('/drivers',(req,res)=>{
-    var driver = Driver.filter(elements =>elements.status=='available')
-    if(driver)
-    res.json(driver)
-    else res.sendStatus(400)
-})
-
-//all riders
-
-app.get('/riders',(req,res)=>{
-    var rider=Rider.filter(elements=>elements)
-    if(rider)
-    res.json(rider)
-    else res.sendStatus(400)
-})
-
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.listen(Port,()=>{
     console.log(`listen to port ${Port}`)
-})
-// rider by ID
+    sequelize.sync({force: true}).then(async()=>{
+        await Promise.all(
+            Driver.bulkCreate(Drivers)
+            
+        )
+        await Promise.all(Rider.bulkCreate(Riders))
+        await Promise.all(Trip.bulkCreate(Trips))
+    })
 
 
-app.get('/rider/:id',(req,res)=>{
-    var rider=Rider.find(elements=>elements.id == req.params.id)
-    if(rider)
-    res.json(rider)
-    else res.sendStatus(400)
 })
+

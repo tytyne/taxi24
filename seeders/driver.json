@@ -1,0 +1,29 @@
+[
+    {
+ 
+    "firstname":"mugisha",
+    "lastname":"eric",
+    "email":"eric@gmail.com",
+    "phone":"0789233447",
+    "status":"available"
+   
+    },
+    {
+       
+        "firstname":"murenzi",
+        "lastname":"igor",
+        "email":"igor@gmail.com",
+        "status":"available",
+        "phone":"0789233447"
+       
+    },
+    {
+      
+        "firstname":"nsabimana",
+        "lastname":"damien",
+        "email":"damien@gmail.com",
+        "status":"unavailable",
+        "phone":"0789233447"
+     
+    }
+]

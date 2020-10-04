@@ -1,0 +1,29 @@
+{
+    "swagger": "2.0",
+    "info": {
+    "version": "1.0.0", 
+    "title": "taxi 24",
+    "description": "TAxi24 Project Application API",
+    "license": {
+    "name": "MIT",
+    "url": "https://opensource.org/licenses/MIT"
+    }
+    },
+    "host": "localhost:5000",
+    "basePath": "/",
+    "tags": [
+    {
+    "name": "Drivers",
+    "description": "API for drivers in the system"
+    }
+    ],
+    "schemes": [
+    "http"
+    ],
+    "consumes": [
+    "application/json"
+    ],
+    "produces": [
+    "application/json"
+    ]
+    }
