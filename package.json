@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start-dev": "node index.js",
-    "migrate": "npx sequelize-cli db:migrate",
-    "migrate:reset": "npx sequelize-cli db:migrate:undo:all && npm run migrate",
-    "test": "cross-env NODE_ENV=test mocha --testTimeout=10000",
-    "pretest": "cross-env NODE_ENV=test npm run migrate:reset"
+    "start":"node index.js",
+    "test":"mocha"
+  
+  },
+  "engines":{
+    "node":"12.18.3"
   },
   "author": "Dusabeyezu Florentine",
   "license": "ISC",
