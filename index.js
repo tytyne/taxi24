@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 
 app.use('/api',routes)
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.listen(Port,()=>{
     console.log(`listen to port ${Port}`)

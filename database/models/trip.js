@@ -7,15 +7,15 @@ module.exports=(sequelize,DataTypes)=>{
         status:{
             type:DataTypes.STRING,
             defaultValue:'active',
-            // validate:{
-            //     isln:{
-            //         args:[
-            //             ['complete','active','cancelled']
-            //         ]
-
-            //     }
-            // }
-        
+            allowNull:false,
+            validate:{
+                isln:{
+                  args:[
+                    ['complete','active','cancelled']
+          
+                  ]
+                }
+              },
         
         
         },

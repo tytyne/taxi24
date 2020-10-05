@@ -9,6 +9,7 @@ module.exports=(sequelize,DataTypes)=>{
     email: DataTypes.STRING,
     phone: DataTypes.STRING,
     status:{type:DataTypes.STRING,
+    defaultValue:'available',
     validate:{
       isln:{
         args:[
@@ -16,7 +17,9 @@ module.exports=(sequelize,DataTypes)=>{
 
         ]
       }
-    }},
+    }
+
+  },
 
 
   },{})

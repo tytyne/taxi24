@@ -25,5 +25,15 @@
         "status":"unavailable",
         "phone":"0789233447"
      
+    },
+
+ {
+      
+        "firstname":"ishimwe",
+        "lastname":"hussen",
+        "email":"hussen@gmail.com",
+        "status":"available",
+        "phone":"0789233447"
+     
     }
 ]
