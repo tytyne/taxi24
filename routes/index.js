@@ -5,6 +5,7 @@ const tripControllers=require('../controllers/tripcontr')
 const router=express.Router()
 
 router.get('/alldrivers',driverControllers.allDrivers);
+router.get('/all',driverControllers.allDrivers);
 router.get('/driver/:id',driverControllers.driverById);
 router.get('/driver',driverControllers.driverByStatus);
 router.get('/allriders',riderControllers.allRiders);

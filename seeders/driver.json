@@ -5,8 +5,9 @@
     "lastname":"eric",
     "email":"eric@gmail.com",
     "phone":"0789233447",
-    "status":"available"
-   
+    "status":"available",
+    "latitude": 30.062026977539062,
+    "longitude":-1.8968549410319084
     },
     {
        
@@ -14,7 +15,9 @@
         "lastname":"igor",
         "email":"igor@gmail.com",
         "status":"available",
-        "phone":"0789233447"
+        "phone":"0789233447",
+        "latitude": 30.062026977539032,
+        "longitude":-1.8968549410319087
        
     },
     {
@@ -23,7 +26,9 @@
         "lastname":"damien",
         "email":"damien@gmail.com",
         "status":"unavailable",
-        "phone":"0789233447"
+        "phone":"0789233447",
+        "latitude": 30.062026977539052,
+        "longitude":-1.8968549410319088
      
     },
 
@@ -33,7 +38,33 @@
         "lastname":"hussen",
         "email":"hussen@gmail.com",
         "status":"available",
-        "phone":"0789233447"
+        "phone":"0789233447",
+        "latitude": 30.062026977539051,
+        "longitude":-1.8968549410319087
+     
+    },
+    {
+      
+        "firstname":"mussa",
+        "lastname":"nsabimana",
+        "email":"mussa@gmail.com",
+        "status":"available",
+        "phone":"0789233447",
+        "latitude": 34.062026977539051,
+        "longitude":-1.8968549410319087
+     
+    },
+
+    {
+      
+        "firstname":"harerimana",
+        "lastname":"Duncan",
+        "email":"duncan@gmail.com",
+        "status":"unavailable",
+        "phone":"0789233447",
+        "latitude": 37.062026977539051,
+        "longitude":-1.8968549410319087
      
     }
+
 ]
