@@ -69,6 +69,22 @@
             "driver routers"
             ],
             "summary": "Get a list of all available drivers within 3km for a specific location",
+            "parameters": [
+                {
+                "name": "Latitude ",
+                "in": "path",
+                "required": true,
+                "description": "Latitude of a specific location",
+                "type": "integer"
+                },
+                {
+                    "name": "Longitude",
+                    "in": "path",
+                    "required": true,
+                    "description": "Longitude of a specific location",
+                    "type": "integer"
+                    }
+                ],
             "responses": {
             "200": {
             "description": "drivers found",
