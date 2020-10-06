@@ -34,7 +34,7 @@
         "tags": [
         "driver routers"
         ],
-        "summary": "Get all drivers in application",
+        "summary": "Get a list of all drivers ",
         "responses": {
         "200": {
         "description": "drivers found",
@@ -45,19 +45,53 @@
         }
         }
         },
+        "/api/available/drivers": {
+            "get": {
+            "tags": [
+                "driver routers"
+            ],
+            "summary": "Get a list of all available drivers",
+            "responses": {
+            "200": {
+            "description": "drivers found",
+            "schema": {
+            "type":"array",
+            "$ref": "#/definitions/Driver"
+            }
+            }
+            }
+            }
+            },
+
+        "/available/range/drivers": {
+            "get": {
+            "tags": [
+            "driver routers"
+            ],
+            "summary": "Get a list of all available drivers within 3km for a specific location",
+            "responses": {
+            "200": {
+            "description": "drivers found",
+            "schema": {
+            "$ref": "#/definitions/Driver"
+            }
+            }
+            }
+            }
+            },
 
         "/api/driver/{id}": {
             "get": {
             "tags": [
                 "driver routers"
             ],
-            "summary": "return a driver with a specific ID",
+            "summary": "Get a specific driver by ID",
             "parameters": [
                 {
                 "name": "id",
                 "in": "path",
                 "required": true,
-                "description": "ID of driver that we want to find",
+                "description": "ID for the Driver",
                 "type": "integer"
                 }
                 ],
@@ -72,39 +106,106 @@
             }
             }
             },
-            "/api/driver": {
-                "get": {
+
+            "/api/trip": {
+                "post": {
                 "tags": [
-                    "driver routers"
+                    "trip routers"
                 ],
-                "summary": "List of all available drivers",
+                "summary": "it will create a trip by assigning driver Id with a rider Id",
+                "parameters": [
+                    {
+                    "name": "driverId",
+                    "in": "path",
+                    "required": true,
+                    "description": "Id of a driver who is going to drive a rider",
+                    "type": "integer"
+                    },
+                    {
+                        "name": "riderId",
+                        "in": "path",
+                        "required": true,
+                        "description": "Id of a rider who enjoy the ride",
+                        "type": "integer"
+                        }
+                    ],
+    
                 "responses": {
                 "200": {
-                "description": "drivers found",
+                "description": "a trip made",
                 "schema": {
-                "type":"array",
-                "$ref": "#/definitions/Driver"
+                "$ref": "#/definitions/Trip"
                 }
                 }
                 }
                 }
                 },
-            "/api/allriders": {
-                "get": {
-                "tags": [
+
+
+        "/complete/trip/{id}": {
+            "get": {
+            "tags": [
                 "rider routers"
+            ],
+            "summary": "Complete a trip",
+            "parameters": [
+                {
+                "name": "id",
+                "in": "path",
+                "required": true,
+                "description": "ID for the trip",
+                "type": "integer"
+                }
                 ],
-                "summary": "Get all riders in application",
+
+            "responses": {
+            "200": {
+            "description": "Complete a trip",
+            "schema": {
+            "$ref": "#/definitions/Trip"
+            }
+            }
+            }
+            }
+            },
+
+
+           
+            "/api/active/trips": {
+                "get": {
+                "tags": [
+                "trip routers"
+                ],
+                "summary": "Get a list of all active Trips",
                 "responses": {
                 "200": {
-                "description": "riders found",
+                "description": "trips found",
                 "schema": {
-                "$ref": "#/definitions/Rider"
+                "$ref": "#/definitions/Trip"
                 }
                 }
                 }
                 }
                 },
+
+
+                "/api/allriders": {
+                    "get": {
+                    "tags": [
+                    "rider routers"
+                    ],
+                    "summary": "Get a list of all riders ",
+                    "responses": {
+                    "200": {
+                    "description": "riders found",
+                    "schema": {
+                    "$ref": "#/definitions/Rider"
+                    }
+                    }
+                    }
+                    }
+                    },
+
             "/api/rider/{id}": {
                 "get": {
                 "tags": [
@@ -158,41 +259,8 @@
                     }
                     }
                     }
-                    },
-                "/api/trip": {
-                    "post": {
-                    "tags": [
-                        "trip routers"
-                    ],
-                    "summary": "it will create a trip by assigning driver Id with a rider Id",
-                    "parameters": [
-                        {
-                        "name": "driverId",
-                        "in": "path",
-                        "required": true,
-                        "description": "Id of a driver who is going to drive a rider",
-                        "type": "integer"
-                        },
-                        {
-                            "name": "riderId",
-                            "in": "path",
-                            "required": true,
-                            "description": "Id of a rider who enjoy the ride",
-                            "type": "integer"
-                            }
-                        ],
-        
-                    "responses": {
-                    "200": {
-                    "description": "a trip made",
-                    "schema": {
-                    "$ref": "#/definitions/Rider"
                     }
-                    }
-                    }
-                    }
-                    }   
-    
+               
         },
         "definitions": {
        
