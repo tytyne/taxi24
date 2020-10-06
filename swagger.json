@@ -10,7 +10,7 @@
     "url": "https://opensource.org/licenses/MIT"
     }
     },
-    "host": "localhost:5000",
+    "host":"https://taxi24.herokuapp.com/",
     "basePath": "/",
     "tags": [
     {
@@ -131,6 +131,34 @@
                 }
                 }
                 },
+                "/api/closer/:id": {
+                    "get": {
+                    "tags": [
+                    "rider routers"
+                    ],
+                    "summary": "Get all drivers closer to the rider",
+
+                    "parameters": [
+                        {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID of rider that wants close drivers",
+                        "type": "integer"
+                        }
+                        ],
+
+
+                    "responses": {
+                    "200": {
+                    "description": "riders found",
+                    "schema": {
+                    "$ref": "#/definitions/Driver"
+                    }
+                    }
+                    }
+                    }
+                    },
                 "/api/trip": {
                     "post": {
                     "tags": [
@@ -194,8 +222,15 @@
             "phone":{
             "type":"string",
             "required":true
+            },
+            "latitude":{
+            "type":"integer",
+            "required":true
+            },
+            "longitude":{
+            "type":"integer",
+            "required":true
             }
-            
         }
 
         
@@ -204,16 +239,24 @@
         "Rider":{
             "properties":{
     
-                    "name": {
-                    "type": "string",
-                    "required":true
-                    },
-                    "phone": {
-                    "type": "string",
-                    "required":true
-                    } 
+                "name": {
+                "type": "string",
+                "required":true
+                },
+                "phone": {
+                "type": "string",
+                "required":true
+                },
 
-            }
+                "latitude":{
+                "type":"integer",
+                "required":true
+                },
+                "longitude":{
+                "type":"integer",
+                "required":true
+                }
+                }
 
         } ,
 

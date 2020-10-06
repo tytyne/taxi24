@@ -1,6 +1,6 @@
 [
     {
- 
+    "id":1,
     "firstname":"mugisha",
     "lastname":"eric",
     "email":"eric@gmail.com",
@@ -10,7 +10,7 @@
     "longitude":-1.8968549410319084
     },
     {
-       
+        "id":2,
         "firstname":"murenzi",
         "lastname":"igor",
         "email":"igor@gmail.com",
@@ -21,7 +21,7 @@
        
     },
     {
-      
+        "id":3,
         "firstname":"nsabimana",
         "lastname":"damien",
         "email":"damien@gmail.com",
@@ -33,7 +33,7 @@
     },
 
  {
-      
+        "id":4,
         "firstname":"ishimwe",
         "lastname":"hussen",
         "email":"hussen@gmail.com",
@@ -44,7 +44,7 @@
      
     },
     {
-      
+        "id":5,
         "firstname":"mussa",
         "lastname":"nsabimana",
         "email":"mussa@gmail.com",
@@ -56,7 +56,7 @@
     },
 
     {
-      
+        "id":6,
         "firstname":"harerimana",
         "lastname":"Duncan",
         "email":"duncan@gmail.com",
@@ -65,6 +65,17 @@
         "latitude": 37.062026977539051,
         "longitude":-1.8968549410319087
      
-    }
+    },
+    {
+        "id":7,
+        "firstname":"kalim",
+        "lastname":"ibra",
+        "email":"ibra@gmail.com",
+        "phone":"0789233440",
+        "status":"available",
+        "latitude": 30.062026977539062,
+        "longitude":-1.8968549410319084
+        }
+
 
 ]

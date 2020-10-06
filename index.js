@@ -15,7 +15,7 @@ app.use(bodyparser.urlencoded({ extended: true }));
 
 
 
-const Port=process.env.Port||3000;
+const Port=process.env.PORT||3000;
 
 
 app.get('/', (req, res) => {

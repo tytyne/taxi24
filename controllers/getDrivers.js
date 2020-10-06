@@ -1,4 +1,4 @@
-const{Driver}=require('../database/models/index')
+const {Driver} =require('../database/models/index')
 var Distance=require('geo-distance')
 
 // all drivers
@@ -34,15 +34,17 @@ const all=async(req,res)=>{
                 if (rangeDistance < Distance('3km')) {
                 console.log('close');
                 kmRange.push(element)
+                    return res.status(200).json({kmRange})
+                    
                 }
-    
+                return  res.status(400).json({"message":"no drivers found"}) 
             
         });
-     
-    return res.status(200).json({kmRange})
-    }else{
+ 
+    }
+    else{
 
-   return  res.status(400).json({"message":"no drivers found"})
+   return  res.status(400).json({"message":"no driver with that id"})
     }
 
 }
