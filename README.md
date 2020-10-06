@@ -3,8 +3,8 @@
 #### by ** Dusabeyezu Florentine**
 
 ## Description
- a set of APIs that other companies can use to manage their fleet of drivers and
-allocate drivers to passengers. They would like your help building these APIs
+A set of APIs that other companies can use to manage their fleet of drivers and
+allocate drivers to passengers.
 
 # Github
 ## Git Repository
