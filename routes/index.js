@@ -4,15 +4,21 @@ const riderControllers = require('../controllers/getRiders')
 const tripControllers=require('../controllers/tripcontr')
 const router=express.Router()
 
-router.get('/alldrivers',driverControllers.allDrivers);
-router.get('/all',driverControllers.all);
-router.get('/driver/:id',driverControllers.driverById);
-router.get('/driver',driverControllers.driverByStatus);
-router.get('/allriders',riderControllers.allRiders);
-router.get('/rider/:id',riderControllers.riderById);
-router.get('/closer/:id',riderControllers.closeToriders)
-router.post('/trip',tripControllers.postTrip);
-router.get('/complete/:id',tripControllers.completeTrip)
-router.get('/trips',tripControllers.tripByStatus)
+router.get('/alldrivers',driverControllers.allDrivers); //all drivers
+router.get('/available/drivers',driverControllers.driverByStatus);//available drivers 
+router.get('/available/range/drivers',driverControllers.all); //3km away
+router.get('/driver/:id',driverControllers.driverById);// by id
+
+
+
+
+router.post('/trip',tripControllers.postTrip); // post a trip
+router.get('/complete/trip/:id',tripControllers.completeTrip) //complete a trip
+router.get('/active/trips',tripControllers.tripByStatus) //active trips
+
+
+router.get('/allriders',riderControllers.allRiders); // all riders
+router.get('/rider/:id',riderControllers.riderById); // rider by ID
+router.get('/closer/rider/:id',riderControllers.closeToriders) // 3 close drivers 
 
 module.exports=router

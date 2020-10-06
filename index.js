@@ -18,15 +18,12 @@ app.use(bodyparser.urlencoded({ extended: true }));
 const Port=process.env.PORT||3000;
 
 
-// app.get('/', (req, res) => {
-//     res.send('Hello World!')
-//   })
 
 app.use('/api',routes)
 
 app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-app.listen(Port,()=>{
+const server = app.listen(Port,()=>{
     console.log(`listen to port ${Port}`)
     sequelize.sync({force: true}).then(async()=>{
         await Promise.all(
@@ -39,4 +36,6 @@ app.listen(Port,()=>{
 
 
 })
+
+module.exports=server;
 
