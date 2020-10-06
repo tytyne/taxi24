@@ -10,7 +10,7 @@
     "url": "https://opensource.org/licenses/MIT"
     }
     },
-    "host": "https://taxi24.herokuapp.com",
+    "host": "taxi24.herokuapp.com",
     "basePath": "/",
     "tags": [
     {
