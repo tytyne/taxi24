@@ -51,17 +51,17 @@
                 "driver routers"
             ],
             "summary": "Get a list of all available drivers",
-            "responses": {
+        "responses": {
             "200": {
-            "description": "drivers found",
-            "schema": {
-            "type":"array",
-            "$ref": "#/definitions/Driver"
-            }
-            }
-            }
+                "description": "drivers found",
+                "schema": {
+                "$ref": "#/definitions/Driver"
+                }
+                }
+                }
             }
             },
+            
 
         "/available/range/drivers": {
             "get": {
