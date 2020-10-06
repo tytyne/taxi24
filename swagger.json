@@ -172,7 +172,7 @@
                 "in": "path",
                 "required": true,
                 "description": "ID for the trip",
-                "type": "integer"
+                "type": "number"
                 }
                 ],
 
