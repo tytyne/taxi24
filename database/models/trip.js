@@ -8,14 +8,14 @@ module.exports=(sequelize,DataTypes)=>{
             type:DataTypes.STRING,
             defaultValue:'active',
             allowNull:false,
-            validate:{
-                isln:{
-                  args:[
-                    ['complete','active','cancelled']
+            // validate:{
+            //     isln:{
+            //       args:[
+            //         ['complete','active','cancelled']
           
-                  ]
-                }
-              },
+            //       ]
+            //     }
+            //   },
         
         
         },
@@ -31,22 +31,21 @@ module.exports=(sequelize,DataTypes)=>{
     },{})
 
     Trip.associate=function(models){
-        Trip.belongsTo(models.Rider,{
-            foreignKey:{
-                name:'riderId',
-                allowNull:false
-            },
-            onDelete:'CASCADE',
+        Trip.belongsTo(models.Driver,{
+            foreignKey:'driverId',
+                as:'driver',
+                onDelete:'CASCADE'
+               
          
         });
 
-        Trip.belongsTo(models.Driver,{
-            foreignKey:{
-                name:'driverId',
-                allowNull:false
-            },
+        Trip.belongsTo(models.Rider,{
+            foreignKey:'riderId',
+                as:'rider',
+                onDelete:'CASCADE',
+            
 
-            onDelete:'CASCADE',
+           
           
         });
 
