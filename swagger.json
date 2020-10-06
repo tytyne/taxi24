@@ -112,7 +112,7 @@
                 "tags": [
                     "trip routers"
                 ],
-                "summary": "it will create a trip by assigning driver Id with a rider Id",
+                "summary": "Create a new Trip  request by assigning a driver to a rider",
                 "parameters": [
                     {
                     "name": "driverId",
@@ -145,7 +145,7 @@
         "/complete/trip/{id}": {
             "get": {
             "tags": [
-                "rider routers"
+                "trip routers"
             ],
             "summary": "Complete a trip",
             "parameters": [
