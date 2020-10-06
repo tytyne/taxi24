@@ -37,13 +37,13 @@ Any web browser
 ```
 2.Install dependencies
 ```bash
-- npm install.
+- npm install
 ```
 3.Start the application by running the start script
 ```bash
 - npm start
 ```
-4.Install postman to test all endpoints on port 5000.
+4.Install postman to test all endpoints on port 3000.
 
 ### Test
 
