@@ -18,13 +18,13 @@ app.use(bodyparser.urlencoded({ extended: true }));
 const Port=process.env.PORT||3000;
 
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-  })
+// app.get('/', (req, res) => {
+//     res.send('Hello World!')
+//   })
 
 app.use('/api',routes)
 
-app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.listen(Port,()=>{
     console.log(`listen to port ${Port}`)
