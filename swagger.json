@@ -45,24 +45,9 @@
         }
         }
         },
-        "/api/available/drivers": {
-        "get": {
-        "tags": [
-        "driver routers"
-        ],
-        "summary": "Get a list of all drivers ",
-        "responses": {
-        "200": {
-        "description": "drivers found",
-        "schema": {
-        "$ref": "#/definitions/Driver"
-        }
-        }
-        }
-        }
-        },
+        
 
-        "/api/available/driverss": {
+        "/api/available/drivers": {
             "get": {
             "tags": [
                 "driver routers"
