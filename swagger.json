@@ -75,14 +75,14 @@
                 "in": "path",
                 "required": true,
                 "description": "Latitude of a specific location",
-                "type": "integer"
+                "type": "number"
                 },
                 {
                     "name": "Longitude",
                     "in": "path",
                     "required": true,
                     "description": "Longitude of a specific location",
-                    "type": "integer"
+                    "type": "number"
                     }
                 ],
             "responses": {
