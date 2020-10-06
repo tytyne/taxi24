@@ -6,41 +6,46 @@
  a set of APIs that other companies can use to manage their fleet of drivers and
 allocate drivers to passengers. They would like your help building these APIs
 
-## Github
-### Git Repository
+# Github
+## Git Repository
 https://github.com/tytyne/taxi24
 
-### Server side hosted on Heroku
+## Server side hosted on Heroku
+
 https://taxi24.herokuapp.com/
 
-### Getting Started
-#### Prerequisites to use of API
+## Getting Started
+
+### Prerequisites to use of API
 Postman
 
 Any web browser
 
-Prerequisites to get this API running on your local system
+### Prerequisites to get this API running on your local system
 
-Node js/express/postgres DB
+1.Node js/express/postgres DB
 
-Any text editor(Preferrably VS Code)
-Git
-#### Installation
-Clone this repository into your local machine:
+2.Any text editor(Preferrably VS Code)
+
+3.Git
+
+### Installation
+
+1.Clone this repository into your local machine:
 
  git clone https://github.com/tytyne/taxi24
 
-Install dependencies
+2.Install dependencies
 
 - npm install.
 
-Start the application by running the start script
+3.Start the application by running the start script
 
 - npm start.
 
-Install postman to test all endpoints on port 5000.
+4.Install postman to test all endpoints on port 5000.
 
-#### Test
+### Test
 
 run test using 'npm test'.
 
@@ -51,9 +56,8 @@ Mocha - JavaScript Test Framework for API Tests
 ## Built With
 NodeJs-EXPRESS: Node.js is a javascript runtime built on Chrome's V8 javascript engine.
 
-
-
-
+# Acknowledgement
+Bank of Kigali
 
 
 
