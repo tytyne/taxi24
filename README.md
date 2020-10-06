@@ -32,17 +32,17 @@ Any web browser
 ### Installation
 
 1.Clone this repository into your local machine:
-
+```bash
  git clone https://github.com/tytyne/taxi24
-
+```
 2.Install dependencies
-
+```bash
 - npm install.
-
+```
 3.Start the application by running the start script
-
-- npm start.
-
+```bash
+- npm start
+```
 4.Install postman to test all endpoints on port 5000.
 
 ### Test
@@ -57,8 +57,9 @@ Mocha - JavaScript Test Framework for API Tests
 NodeJs-EXPRESS: Node.js is a javascript runtime built on Chrome's V8 javascript engine.
 
 # Acknowledgement
-Bank of Kigali
-
+<ul>
+ <li> Bank of Kigali</li>
+</ul>
 
 
 ### License
