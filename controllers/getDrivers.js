@@ -9,15 +9,22 @@ const allDrivers=async(req,res)=>{
     res.status(400).json({"message":"no drivers found"})
 
 }
+// where  driver available drivers
+
+const driverByStatus= async(req,res)=>{
+    let driver = await Driver.findAll({where:{status:"available"}})
+    if(driver)
+    return res.status(200).json({driver})
+    else
+    return res.status(400).json({"message":"there is not available driver"})
+}
 
 // all drivers
 const all=async(req,res)=>{
-    let drivers = await Driver.findAll()
+    let drivers = await Driver.findAll({where:{status:"available"}})
     let{lat,long}=req.body;
     let kmRange =[]
     if(drivers){
-
-
         drivers.forEach(element => {
             var specificLocation={
                 lat,
@@ -33,13 +40,16 @@ const all=async(req,res)=>{
                 console.log('' + rangeDistance.human_readable());
                 if (rangeDistance < Distance('3km')) {
                 console.log('close');
-                kmRange.push(element)
-                    return res.status(200).json({kmRange})
-                    
+                kmRange.push(element)     
                 }
-                return  res.status(400).json({"message":"no drivers found"}) 
-            
+                if(kmRange.length == 0){
+                  
+                return  res.status(400).json({"message":"no drivers available in 3km"})  
+                }
+               
+               
         });
+    return res.status(200).json({kmRange})
  
     }
     else{
@@ -55,15 +65,6 @@ const driverById = async(req,res)=>{
     return res.status(200).json({driver})
    
     return res.status(400).json({"message":"THat driver can not be found"})
-}
-// where  driver status available
-
-const driverByStatus= async(req,res)=>{
-    let driver = await Driver.findAll({where:{status:"available"}})
-    if(driver)
-    return res.status(200).json({driver})
-    else
-    return res.status(400).json({"message":"there is not available driver"})
 }
 
 module.exports={
