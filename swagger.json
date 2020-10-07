@@ -10,7 +10,7 @@
     "url": "https://opensource.org/licenses/MIT"
     }
     },
-    "host": "taxi24.herokuapp.com",
+    "host": "https://taxi24.herokuapp.com/",
     "basePath": "/",
     "tags": [
     {
@@ -133,17 +133,17 @@
                 "summary": "Create a new Trip  request by assigning a driver to a rider",
                 "parameters": [
                     {
-                    "name": "driverId",
+                    "name": "usernameRider",
                     "in": "path",
                     "required": true,
-                    "description": "Id of a driver who is going to drive a rider",
+                    "description": "username of the rider",
                     "type": "integer"
                     },
                     {
-                        "name": "riderId",
+                        "name": "usernameDriver",
                         "in": "path",
                         "required": true,
-                        "description": "Id of a rider who enjoy the ride",
+                        "description": " username of the driver",
                         "type": "integer"
                         }
                     ],

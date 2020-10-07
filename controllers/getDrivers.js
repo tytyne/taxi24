@@ -6,7 +6,7 @@ const allDrivers=async(req,res)=>{
     let drivers = await Driver.findAll()
     res.status(200).json({drivers})
 
-    res.status(400).json({"message":"no drivers found"})
+   return res.status(400).json({"message":"no drivers found"})
 
 }
 // where  driver available drivers

@@ -2,6 +2,7 @@
     {
     "id":1,
     "name":"giselle",
+    "username":"Giselle@",
     "phone":"0783456789",
     "latitude": 30.062026977539012,
     "longitude":-1.8968549410319088
@@ -10,6 +11,7 @@
     {
         "id":2,
         "name":"ange",
+        "username":"Ange@",
         "phone":"0783456789",
         "latitude": 31.062026977539052,
         "longitude":-1.8968549410319088
@@ -18,6 +20,7 @@
     {
         "id":3,
         "name":"yvone",
+        "username":"Yvonne@",
         "phone":"0723456789",
         "latitude": 32.062026977539052,
         "longitude":-1.8968549410319088
@@ -27,6 +30,7 @@
     {
         "id":4,
         "name":"raissa",
+        "username":"Raissa@",
         "phone":"0783456739",
         "latitude": 32.062026977539052,
         "longitude":-1.8968549410319088
@@ -36,6 +40,7 @@
     {
         "id":5,
         "name":"teta",
+        "username":"Teta@",
         "phone":"0783456189",
         "latitude": 39.062026977539052,
         "longitude":-1.8968549410319088

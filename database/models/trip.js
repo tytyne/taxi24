@@ -2,31 +2,13 @@
 
 module.exports=(sequelize,DataTypes)=>{
     const Trip=sequelize.define('Trip',{
-
-
         status:{
             type:DataTypes.STRING,
             defaultValue:'active',
             allowNull:false,
-            // validate:{
-            //     isln:{
-            //       args:[
-            //         ['complete','active','cancelled']
-          
-            //       ]
-            //     }
-            //   },
         
         
         },
-
-
-
-
-        createdAt:{
-            allowNull:false,
-            type:DataTypes.DATE
-        }
 
     },{})
 
