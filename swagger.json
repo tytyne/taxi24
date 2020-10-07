@@ -293,15 +293,16 @@
             "type": "string",
             "required":true
             },
+            "username": {
+            "type": "string",
+            "required":true
+            },
             "email": {
             "type": "string",
             "required":true
             },
             "status":{
             "type":"string",
-            "enum":[
-                "available","unavailable"
-            ],
             "default":"available",
             "required":true
             },
@@ -326,6 +327,10 @@
             "properties":{
     
                 "name": {
+                "type": "string",
+                "required":true
+                },
+                "username": {
                 "type": "string",
                 "required":true
                 },
@@ -361,7 +366,6 @@
                     },
                     "status":{
                         "type":"string",
-                        "enum":["active","complete","cancelled"],
                         "default":"active"
                     }
 
