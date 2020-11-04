@@ -137,14 +137,14 @@
                     "in": "path",
                     "required": true,
                     "description": "username of the rider",
-                    "type": "integer"
+                    "type": "string"
                     },
                     {
                         "name": "usernameDriver",
                         "in": "path",
                         "required": true,
                         "description": " username of the driver",
-                        "type": "integer"
+                        "type": "string"
                         }
                     ],
     
