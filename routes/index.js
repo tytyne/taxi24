@@ -13,7 +13,7 @@ router.get('/driver/:id',driverControllers.driverById);// by id //completed
 
 
 router.post('/trip',tripControllers.postTrip); // post a trip
-router.get('/complete/trip/:id',tripControllers.completeTrip) //complete a trip
+router.patch('/complete/trip/:id/:riderId',tripControllers.completeTrip) //complete a trip
 router.get('/active/trips',tripControllers.tripByStatus) //active trips
 
 

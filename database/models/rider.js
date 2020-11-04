@@ -9,6 +9,7 @@ module.exports=(sequelize,DataTypes)=>{
         phone:DataTypes.STRING,
         latitude:DataTypes.DECIMAL,
         longitude:DataTypes.DECIMAL,
+        status:DataTypes.STRING
     
 
     },{})

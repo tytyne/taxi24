@@ -5,7 +5,8 @@
     "username":"Giselle@",
     "phone":"0783456789",
     "latitude": 30.062026977539012,
-    "longitude":-1.8968549410319088
+    "longitude":-1.8968549410319088,
+    "status":"active"
   
     },
     {
@@ -14,8 +15,8 @@
         "username":"Ange@",
         "phone":"0783456789",
         "latitude": 31.062026977539052,
-        "longitude":-1.8968549410319088
-     
+        "longitude":-1.8968549410319088,
+        "status":"unactive"
     },
     {
         "id":3,
@@ -23,8 +24,8 @@
         "username":"Yvonne@",
         "phone":"0723456789",
         "latitude": 32.062026977539052,
-        "longitude":-1.8968549410319088
-      
+        "longitude":-1.8968549410319088,
+        "status":"unactive"
        
     },
     {
@@ -33,8 +34,8 @@
         "username":"Raissa@",
         "phone":"0783456739",
         "latitude": 32.062026977539052,
-        "longitude":-1.8968549410319088
-      
+        "longitude":-1.8968549410319088,
+        "status":"active"
        
     },
     {
@@ -43,8 +44,8 @@
         "username":"Teta@",
         "phone":"0783456189",
         "latitude": 39.062026977539052,
-        "longitude":-1.8968549410319088
-      
+        "longitude":-1.8968549410319088,
+        "status":"active"
        
     }
     

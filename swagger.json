@@ -73,14 +73,14 @@
             "summary": "Get a list of all available drivers within 3km for a specific location",
             "parameters": [
                 {
-                "name": "Latitude ",
+                "name": "lat ",
                 "in": "path",
                 "required": true,
                 "description": "Latitude of a specific location",
                 "type": "number"
                 },
                 {
-                    "name": "Longitude",
+                    "name": "long",
                     "in": "path",
                     "required": true,
                     "description": "Longitude of a specific location",
