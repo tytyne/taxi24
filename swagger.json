@@ -133,19 +133,20 @@
                 "summary": "Create a new Trip  request by assigning a driver to a rider",
                 "parameters": [
                     {
-                    "name": "usernameRider",
-                    "in": "path",
-                    "required": true,
-                    "description": "username of the rider",
-                    "type": "string"
-                    },
-                    {
                         "name": "usernameDriver",
                         "in": "path",
                         "required": true,
                         "description": " username of the driver",
                         "type": "string"
-                        }
+                        },
+                    {
+                    "name": "usernameRider",
+                    "in": "path",
+                    "required": true,
+                    "description": "username of the rider",
+                    "type": "string"
+                    }
+                   
                     ],
     
                 "responses": {
