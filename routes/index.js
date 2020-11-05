@@ -2,6 +2,7 @@ const express= require('express');
 const driverControllers = require('../controllers/getDrivers');
 const riderControllers = require('../controllers/getRiders')
 const tripControllers=require('../controllers/tripcontr')
+
 const router=express.Router()
 
 router.get('/alldrivers',driverControllers.allDrivers); //all drivers //completed

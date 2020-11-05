@@ -1,6 +1,6 @@
 const {Driver} =require('../database/models/index')
 var Distance=require('geo-distance')
-
+const validate=require('../validators/locationValidator')
 // all drivers
 const allDrivers=async(req,res)=>{
     let drivers = await Driver.findAll()
@@ -21,7 +21,12 @@ const driverByStatus= async(req,res)=>{
 
 // all drivers
 const all=async(req,res)=>{
+    const { error } = validate(req.body);
+    if (error) {
+        return res.status(400).send(error.details[0].message);
+    }
     let listOfDrivers = await Driver.findAll({where:{status:"available"}})
+    
     let{lat,long}=req.body;
     let drivers =[]
     if(listOfDrivers){

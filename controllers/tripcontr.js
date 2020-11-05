@@ -3,10 +3,15 @@ const { Trip } = require('../database/models/index')
 const { Driver } = require('../database/models/index')
 const { Rider } = require('../database/models/index')
 const {Invoice} = require('../database/models/index')
+const validate=require('../validators/usernameValidator')
 //make a trip
 const postTrip = async (req, res) => {
-
+    const { error } = validate(req.body);
+    if (error) {
+        return res.status(400).send(error.details[0].message);
+    }
     try {
+
         const { usernameRider, usernameDriver } = req.body
         const driver = await Driver.findOne({ where: { username: usernameDriver } })
         const rider = await Rider.findOne({ where: { username: usernameRider } })
