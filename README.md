@@ -6,7 +6,7 @@
 A set of APIs that other companies can use to manage their fleet of drivers and
 allocate drivers to passengers.
 
-### Tools Used
+## Tools Used
 Javascript : Language used.
 
 NodeJS : Javascript runtime.
@@ -30,7 +30,7 @@ Postman : Documentation
 ### Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites to use of API
+## Prerequisites to use of API
 Postman
 
 Any web browser
