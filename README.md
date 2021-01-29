@@ -6,15 +6,29 @@
 A set of APIs that other companies can use to manage their fleet of drivers and
 allocate drivers to passengers.
 
-# Github
-## Git Repository
-https://github.com/tytyne/taxi24
+### Tools Used
+Javascript : Language used.
 
-## Server side hosted on Heroku
+NodeJS : Javascript runtime.
 
-https://taxi24.herokuapp.com/
+Express : NodeJs framework.
 
-## Getting Started
+Mocha, Chai and Supertest : Testing Framework.
+
+Airbnb : Javascript style Guide.
+
+Github CI : Continuous Integration.
+
+nyc : Test coverage.
+
+Coveralls : Git badge.
+
+Heroku : Deployment.
+
+Postman : Documentation
+
+### Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites to use of API
 Postman
